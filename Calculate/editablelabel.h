@@ -31,19 +31,24 @@ protected:
             // Подключаем слоты для завершения редактирования
             connect(lineEdit, &MyLineEdit::editingFinished, this, &EditableLabel::finishEditing);
             connect(lineEdit, &MyLineEdit::returnPressed, this, &EditableLabel::finishEditing);
-            connect(lineEdit, &QLineEdit::textChanged, this, &EditableLabel::adjustSize);
+            connect(lineEdit, &QLineEdit::textChanged, this, &EditableLabel::change);
 
             // Скрываем QLabel
-            setHidden(true);
+//            setHidden(true);
         }
     }
-
 private slots:
+    void change() {
+        QString newText = lineEdit->text();
+        setText(newText);
+        QFontMetrics metrics(font());
+        int textWidth = metrics.horizontalAdvance(text());
+        setFixedWidth(textWidth+5); // Add some padding for better appearance
+//        qobject_cast<QWidget*>(parent())->setMinimumSize(300, 300);
+    }
     void finishEditing() {
         if (lineEdit) {
             // Получаем текст из QLineEdit и отправляем сигнал об окончании редактирования
-            QString newText = lineEdit->text();
-            setText(newText);
 //            emit editingFinished(newText);
 
             // Удаляем QLineEdit
@@ -51,14 +56,10 @@ private slots:
 //            delete lineEdit;
 
             // Показываем QLabel снова
-            setHidden(false);
+//            setHidden(false);
         }
     }
-    void adjustSize() {
-        QFontMetrics metrics(font());
-        int textWidth = metrics.horizontalAdvance(text());
-        setFixedWidth(textWidth + 10); // Add some padding for better appearance
-    }
+
 
 private:
     MyLineEdit *lineEdit = nullptr;

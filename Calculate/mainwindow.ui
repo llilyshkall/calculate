@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background: white</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="Expression" name="widget" native="true">
@@ -22,8 +22,8 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>81</width>
-      <height>21</height>
+      <width>781</width>
+      <height>71</height>
      </rect>
     </property>
    </widget>

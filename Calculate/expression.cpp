@@ -17,4 +17,6 @@ Expression::Expression(QWidget *parent) : QWidget(parent) {
                 &Expression::onLabelEditingFinished);
     }
     setMinimumSize(layout->minimumSize());
+    layout->addStretch(1);
+    setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
 }
