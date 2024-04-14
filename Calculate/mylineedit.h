@@ -12,11 +12,10 @@ public:
         connect(this, &QLineEdit::textChanged, this, &MyLineEdit::adjustSize);
         adjustSize();
     }
-protected:
     void adjustSize() {
         QFontMetrics metrics(font());
         int textWidth = metrics.horizontalAdvance(text());
-        setFixedWidth(textWidth + 10); // Add some padding for better appearance
+        setFixedWidth(textWidth + 5); // Add some padding for better appearance
     }
 };
 

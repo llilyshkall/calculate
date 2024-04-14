@@ -8,7 +8,16 @@
 class EditableLabel : public QLabel {
     Q_OBJECT
 public:
-    explicit EditableLabel(QWidget *parent = nullptr) : QLabel(parent) {}
+    explicit EditableLabel(QWidget *parent = nullptr, int nesting = 1) : QLabel(parent) , nesting_(nesting) {
+        setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        setStyleSheet("border: 1px solid black; color: white;");
+        setAlignment(Qt::AlignCenter);
+        QFont font;
+        font.setPointSize(40 / nesting); // Устанавливаем размер шрифта 16
+
+        // Устанавливаем шрифт для метки
+        setFont(font);
+    }
 
 signals:
     void editingFinished(const QString &text);
@@ -16,17 +25,18 @@ signals:
 protected:
     void mousePressEvent(QMouseEvent *event) override {
         if (event->button() == Qt::LeftButton) {
-            // Получаем геометрию QLabel
-            QRect rect = geometry();
 
             // Создаем QLineEdit и устанавливаем его геометрию
             lineEdit = new MyLineEdit(qobject_cast<QWidget*>(parent()));
-            lineEdit->setGeometry(rect);
+
             lineEdit->setText(text());
+            lineEdit->setGeometry(geometry());
+            lineEdit->setFont(font());
             lineEdit->selectAll();
             lineEdit->show();
             // Устанавливаем фокус на QLineEdit
             lineEdit->setFocus();
+            lineEdit->adjustSize();
 
             // Подключаем слоты для завершения редактирования
             connect(lineEdit, &MyLineEdit::editingFinished, this, &EditableLabel::finishEditing);
@@ -63,6 +73,7 @@ private slots:
 
 private:
     MyLineEdit *lineEdit = nullptr;
+    int nesting_;
 };
 
 #endif // EDITABLELABEL_H

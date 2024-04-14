@@ -4,19 +4,11 @@
 #include "editablelabel.h"
 
 Expression::Expression(QWidget *parent) : QWidget(parent) {
-    QHBoxLayout *layout = new QHBoxLayout(this);
+    QGridLayout *layout = new QGridLayout(this);
+    EditableLabel *label = new EditableLabel(this);
+    label->setText("abc");
+    layout->addWidget(label, 1, 1);
 
-    // Создаем объекты типа Lexema и добавляем их в горизонтальный layout
-    for (int i = 0; i < 3; ++i) {
-        Lexema *lexema = new Lexema(this);
-        layout->addWidget(lexema);
-        lexemas.append(lexema);
-        connect(lexema->getLabel(),
-                &EditableLabel::editingFinished,
-                this,
-                &Expression::onLabelEditingFinished);
-    }
-    setMinimumSize(layout->minimumSize());
-    layout->addStretch(1);
-    setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
+    layout->setColumnStretch(3, 1);
+    layout->setRowStretch(3, 1);
 }

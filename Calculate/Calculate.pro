@@ -11,7 +11,6 @@ CONFIG += c++17
 SOURCES += \
     editablelabel.cpp \
     expression.cpp \
-    lexema.cpp \
     main.cpp \
     mainwindow.cpp \
     mylineedit.cpp
@@ -19,7 +18,6 @@ SOURCES += \
 HEADERS += \
     editablelabel.h \
     expression.h \
-    lexema.h \
     mainwindow.h \
     mylineedit.h
 

@@ -13,17 +13,15 @@ Lexema::Lexema(QWidget* parent) : QWidget(parent) {
     layout->addWidget(label, 1, 1);
 
     // Заполняем остальные ячейки пустыми QLabel
-    for (int row = 0; row < 3; ++row) {
-        for (int col = 0; col < 3; ++col) {
-            if (!(row == 1 && col == 1)) {
-                QLabel *emptyLabel = new QLabel(this);
+//    for (int row = 0; row < 3; ++row) {
+//        for (int col = 0; col < 3; ++col) {
+//            if (!(row == 1 && col == 1)) {
+//                QLabel *emptyLabel = new QLabel(this);
 
-                emptyLabel->setText("");
-                emptyLabel->setAlignment(Qt::AlignCenter);
-                emptyLabel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-                emptyLabel->setStyleSheet("border: 1px solid black;");
-                layout->addWidget(emptyLabel, row, col);
-            }
-        }
-    }
+//                emptyLabel->setText("");
+//                emptyLabel->setStyleSheet("border: 1px solid black;");
+//                layout->addWidget(emptyLabel, row, col);
+//            }
+//        }
+//    }
 }
