@@ -7,7 +7,7 @@ EditableLabel::EditableLabel(QWidget *parent) : QLabel(parent) {}
 
 EditableLabel::EditableLabel(Expression* parent) : QLabel(nullptr), parent_(parent) {
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    setStyleSheet(STYLE_NOT_SELECT);
+    setDefaultStyle();
     setAlignment(Qt::AlignCenter);
     QFont font;
     font.setPointSize(40 / parent_->nesting()); // Устанавливаем размер шрифта 16
@@ -18,9 +18,9 @@ EditableLabel::EditableLabel(Expression* parent) : QLabel(nullptr), parent_(pare
 
 void EditableLabel::mousePressEvent(QMouseEvent *event) {
     if (event->button() == Qt::LeftButton) {
-        select->setStyleSheet(STYLE_NOT_SELECT);
+        select->setDefaultStyle();
         select = this;
-        setStyleSheet(STYLE_SELECT);
+        setSelectStyle();
         // Создаем QLineEdit и устанавливаем его геометрию
         lineEdit = new MyLineEdit(qobject_cast<QWidget*>(parent()));
 
@@ -57,8 +57,20 @@ void EditableLabel::finishEditing() {
         // Удаляем QLineEdit
         lineEdit->setParent(nullptr);
 //            delete lineEdit;
-
+        setSelectStyle();
         // Показываем QLabel снова
 //            setHidden(false);
+    }
+}
+
+void EditableLabel::setSelectStyle(){
+    setStyleSheet("border: 1px solid rgb(134,  27,  227); color: white; padding: 0px; border-radius: 5px; margin: 1px;");
+}
+
+void EditableLabel::setDefaultStyle(){
+    if (text().isEmpty()){
+        setStyleSheet("color: white; border: 1px dashed white; padding: 0px; margin: 1px;");
+    } else {
+        setStyleSheet("color: white; border: 1px solid transparent; padding: 0px; margin: 1px;");
     }
 }

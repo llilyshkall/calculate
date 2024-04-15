@@ -13,10 +13,12 @@ public:
     Expression(QWidget *parent = nullptr);
     Expression(Expression *parent = nullptr, int nesting = 1);
     int nesting();
+    QString toString();
 
     QGridLayout *layout;
     Expression *parent;
     int nesting_;
+
 private slots:
     void onLabelEditingFinished(const QString &text);
 

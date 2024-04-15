@@ -25,7 +25,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="Expression" name="widget" native="true">
+     <widget class="Expression" name="expression" native="true">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -37,7 +37,7 @@
     <item>
      <layout class="QGridLayout" name="gridLayout">
       <item row="1" column="5">
-       <widget class="QPushButton" name="pushButton_18">
+       <widget class="QPushButton" name="pushButton_8">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -73,7 +73,7 @@ QPushButton:disabled {
        </widget>
       </item>
       <item row="1" column="4">
-       <widget class="QPushButton" name="pushButton_14">
+       <widget class="QPushButton" name="pushButton_7">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -109,7 +109,7 @@ QPushButton:disabled {
        </widget>
       </item>
       <item row="2" column="6">
-       <widget class="QPushButton" name="pushButton_24">
+       <widget class="QPushButton" name="pushButton_6">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -146,6 +146,9 @@ QPushButton:disabled {
       </item>
       <item row="1" column="9">
        <widget class="QPushButton" name="pushButton_32">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -176,12 +179,12 @@ QPushButton:disabled {
 }</string>
         </property>
         <property name="text">
-         <string>÷</string>
+         <string/>
         </property>
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QPushButton" name="pushButton_5">
+       <widget class="QPushButton" name="pushButton_overlining">
         <property name="enabled">
          <bool>false</bool>
         </property>
@@ -220,7 +223,7 @@ QPushButton:disabled {
        </widget>
       </item>
       <item row="4" column="4" colspan="2">
-       <widget class="QPushButton" name="pushButton_15">
+       <widget class="QPushButton" name="pushButton_0">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -257,6 +260,9 @@ QPushButton:disabled {
       </item>
       <item row="2" column="9">
        <widget class="QPushButton" name="pushButton_30">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -287,12 +293,12 @@ QPushButton:disabled {
 }</string>
         </property>
         <property name="text">
-         <string>×</string>
+         <string/>
         </property>
        </widget>
       </item>
       <item row="3" column="5">
-       <widget class="QPushButton" name="pushButton_17">
+       <widget class="QPushButton" name="pushButton_2">
         <property name="enabled">
          <bool>true</bool>
         </property>
@@ -331,7 +337,7 @@ QPushButton:disabled {
        </widget>
       </item>
       <item row="1" column="7">
-       <widget class="QPushButton" name="pushButton_26">
+       <widget class="QPushButton" name="pushButton_div">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -403,7 +409,7 @@ QPushButton:disabled {
        </widget>
       </item>
       <item row="1" column="6">
-       <widget class="QPushButton" name="pushButton_22">
+       <widget class="QPushButton" name="pushButton_9">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -439,7 +445,7 @@ QPushButton:disabled {
        </widget>
       </item>
       <item row="2" column="4">
-       <widget class="QPushButton" name="pushButton_16">
+       <widget class="QPushButton" name="pushButton_4">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -511,7 +517,7 @@ QPushButton:disabled {
        </widget>
       </item>
       <item row="3" column="7">
-       <widget class="QPushButton" name="pushButton_25">
+       <widget class="QPushButton" name="pushButton_sub">
         <property name="enabled">
          <bool>true</bool>
         </property>
@@ -550,7 +556,7 @@ QPushButton:disabled {
        </widget>
       </item>
       <item row="2" column="5">
-       <widget class="QPushButton" name="pushButton_20">
+       <widget class="QPushButton" name="pushButton_5">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -622,7 +628,7 @@ QPushButton:disabled {
        </widget>
       </item>
       <item row="3" column="6">
-       <widget class="QPushButton" name="pushButton_21">
+       <widget class="QPushButton" name="pushButton_3">
         <property name="enabled">
          <bool>true</bool>
         </property>
@@ -661,7 +667,7 @@ QPushButton:disabled {
        </widget>
       </item>
       <item row="3" column="4">
-       <widget class="QPushButton" name="pushButton_13">
+       <widget class="QPushButton" name="pushButton_1">
         <property name="enabled">
          <bool>true</bool>
         </property>
@@ -700,7 +706,7 @@ QPushButton:disabled {
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QPushButton" name="pushButton_12">
+       <widget class="QPushButton" name="pushButton_del">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -737,6 +743,9 @@ QPushButton:disabled {
       </item>
       <item row="4" column="9">
        <widget class="QPushButton" name="pushButton_29">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -767,7 +776,7 @@ QPushButton:disabled {
 }</string>
         </property>
         <property name="text">
-         <string>+</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -828,6 +837,9 @@ QPushButton:disabled {
       </item>
       <item row="1" column="0">
        <widget class="QPushButton" name="pushButton_10">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -858,7 +870,7 @@ QPushButton:disabled {
 }</string>
         </property>
         <property name="text">
-         <string>LaTex</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -899,7 +911,7 @@ QPushButton:disabled {
        </widget>
       </item>
       <item row="4" column="1">
-       <widget class="QPushButton" name="pushButton_6">
+       <widget class="QPushButton" name="pushButton_underlining">
         <property name="enabled">
          <bool>false</bool>
         </property>
@@ -940,7 +952,7 @@ QPushButton:disabled {
       <item row="3" column="9">
        <widget class="QPushButton" name="pushButton_31">
         <property name="enabled">
-         <bool>true</bool>
+         <bool>false</bool>
         </property>
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
@@ -972,12 +984,12 @@ QPushButton:disabled {
 }</string>
         </property>
         <property name="text">
-         <string>-</string>
+         <string/>
         </property>
        </widget>
       </item>
       <item row="1" column="2">
-       <widget class="QPushButton" name="pushButton_11">
+       <widget class="QPushButton" name="pushButton_clear">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -1013,7 +1025,7 @@ QPushButton:disabled {
        </widget>
       </item>
       <item row="4" column="6">
-       <widget class="QPushButton" name="pushButton_23">
+       <widget class="QPushButton" name="pushButton_dot">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -1049,7 +1061,7 @@ QPushButton:disabled {
        </widget>
       </item>
       <item row="2" column="7">
-       <widget class="QPushButton" name="pushButton_28">
+       <widget class="QPushButton" name="pushButton_mul">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -1101,7 +1113,7 @@ QPushButton:disabled {
        </spacer>
       </item>
       <item row="4" column="7">
-       <widget class="QPushButton" name="pushButton_27">
+       <widget class="QPushButton" name="pushButton_add">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -1212,7 +1224,7 @@ QPushButton:disabled {
        </widget>
       </item>
       <item row="0" column="9">
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="pushButton_latex">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -1248,7 +1260,10 @@ QPushButton:disabled {
        </widget>
       </item>
       <item row="0" column="0" colspan="8">
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="label_latex">
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
         <property name="styleSheet">
          <string notr="true">QLabel {
 	color:white;

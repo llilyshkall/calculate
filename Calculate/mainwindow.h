@@ -23,6 +23,11 @@ public:
     void click_arrow_left_down();
     void click_ret_parent();
 
+    void addSymbol();
+    void delSymbol();
+
+    void makeLatex();
+
 private:
     Ui::MainWindow *ui;
 };

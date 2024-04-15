@@ -5,9 +5,6 @@
 #include <QtWidgets>
 #include "mylineedit.h"
 
-#define STYLE_SELECT "border: 1px solid red; color: white"
-#define STYLE_NOT_SELECT "color: white; border: 1px solid transparent;"
-
 class Expression;
 
 class EditableLabel : public QLabel {
@@ -17,8 +14,11 @@ public:
     EditableLabel(Expression* parent = nullptr);
     static EditableLabel* select;
     Expression* parent_;
+    void setSelectStyle();
+    void setDefaultStyle();
 signals:
     void editingFinished(const QString &text);
+
 protected:
     void mousePressEvent(QMouseEvent *event) override;
 private slots:
