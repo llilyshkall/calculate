@@ -2,31 +2,26 @@
 #define EXPRESSION_H
 
 #include <QWidget>
-#include <QtWidgets/QLabel>
-#include "lexema.h"
+#include <QtWidgets>
 #include "editablelabel.h"
 
+class EditableLabel;
+
 class Expression : public QWidget {
+    Q_OBJECT
 public:
     Expression(QWidget *parent = nullptr);
+    Expression(Expression *parent = nullptr, int nesting = 1);
+    int nesting();
 
-    // Функция для доступа к QLabel в центральной ячейке определенного Lexema
-    QLabel* getCentralLabel(int index) const {
-        if (index >= 0 && index < lexemas.size()) {
-            return lexemas[index]->getLabel();
-        }
-        return nullptr;
-    }
+    QGridLayout *layout;
+    Expression *parent;
+    int nesting_;
 private slots:
-    void onLabelEditingFinished(const QString &text) {
-        // Получаем указатель на QLabel и обновляем его текст
-        EditableLabel *label = qobject_cast<EditableLabel*>(sender());
-        if (label) {
-            label->setText(text);
-        }
-    }
-private:
-    QList<Lexema*> lexemas;
+    void onLabelEditingFinished(const QString &text);
+
+
 };
+
 
 #endif // EXPRESSION_H

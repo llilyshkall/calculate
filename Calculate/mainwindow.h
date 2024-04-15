@@ -15,6 +15,14 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void click_arrow_right();
+    void click_arrow_left();
+    void click_arrow_right_up();
+    void click_arrow_right_down();
+    void click_arrow_left_up();
+    void click_arrow_left_down();
+    void click_ret_parent();
+
 private:
     Ui::MainWindow *ui;
 };

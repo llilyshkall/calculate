@@ -10,6 +10,7 @@ class MyLineEdit : public QLineEdit
 public:
     MyLineEdit(QWidget *parent = nullptr) : QLineEdit(parent) {
         connect(this, &QLineEdit::textChanged, this, &MyLineEdit::adjustSize);
+        setStyleSheet("color:white;");
         adjustSize();
     }
     void adjustSize() {
