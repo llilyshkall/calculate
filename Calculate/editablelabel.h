@@ -1,35 +1,34 @@
 #ifndef EDITABLELABEL_H
 #define EDITABLELABEL_H
 
+#include "mylineedit.h"
 #include <QObject>
 #include <QtWidgets>
-#include "mylineedit.h"
 
 class Expression;
 
 class EditableLabel : public QLabel {
-    Q_OBJECT
+  Q_OBJECT
 public:
-    EditableLabel(QWidget *parent = nullptr);
-    EditableLabel(Expression* parent = nullptr);
-    static EditableLabel* select;
-    Expression* parent_;
-    void setSelectStyle();
-    void setDefaultStyle();
+  EditableLabel(QWidget *parent = nullptr);
+  EditableLabel(Expression *parent = nullptr);
+  static EditableLabel *select;
+  Expression *parent_;
+  void setSelectStyle();
+  void setDefaultStyle();
 signals:
-    void editingFinished(const QString &text);
+  void editingFinished(const QString &text);
 
 protected:
-    void mousePressEvent(QMouseEvent *event) override;
+  void mousePressEvent(QMouseEvent *event) override;
 private slots:
-    void change();
-    void finishEditing();
-
+  void change();
+  void finishEditing();
 
 private:
-    MyLineEdit *lineEdit = nullptr;
+  MyLineEdit *lineEdit = nullptr;
 
-    int nesting_;
+  int nesting_;
 };
 
 #endif // EDITABLELABEL_H

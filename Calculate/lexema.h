@@ -1,22 +1,19 @@
 #ifndef LEXEMA_H
 #define LEXEMA_H
 
-#include <QWidget>
+#include "editablelabel.h"
 #include <QGridLayout>
 #include <QLabel>
-#include "editablelabel.h"
+#include <QWidget>
 
 class Lexema : public QWidget {
 public:
-    Lexema(QWidget *parent = nullptr);
+  Lexema(QWidget *parent = nullptr);
 
-
-    EditableLabel* getLabel() const {
-        return label;
-    }
+  EditableLabel *getLabel() const { return label; }
 
 private:
-    EditableLabel *label;
+  EditableLabel *label;
 };
 
 #endif // LEXEMA_H
